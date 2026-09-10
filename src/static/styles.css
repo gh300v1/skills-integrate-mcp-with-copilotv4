@@ -24,8 +24,27 @@ header {
   border-radius: 5px;
 }
 
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 20px;
+}
+
 header h1 {
   margin-bottom: 10px;
+}
+
+.auth-panel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-status {
+  font-size: 14px;
+  color: #e3f2fd;
 }
 
 main {
@@ -162,6 +181,52 @@ button {
 
 button:hover {
   background-color: #3949ab;
+}
+
+.secondary-btn {
+  background-color: #f5f5f5;
+  color: #1a237e;
+  border: 1px solid #d0d7ff;
+}
+
+.secondary-btn:hover {
+  background-color: #e8ecff;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background: white;
+  color: #1f2937;
+  width: min(420px, 90vw);
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .header-row {
+    flex-direction: column;
+  }
+
+  .auth-panel {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .message {
